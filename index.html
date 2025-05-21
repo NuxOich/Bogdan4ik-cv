@@ -101,23 +101,71 @@
 <hr>
 
 <h2>Связь с Пентагоном</h2>
-<form action="/">
-<label for="code">Секретный код:</label>
-<input type="text" id="code" placeholder="Начните вводить супер секретный код...">
-<input type="submit" value="За Казахстан!">
+<form id="pentagonForm">
+  <label for="code">Секретный код:</label>
+  <input type="text" id="code" placeholder="Начните вводить супер секретный код...">
+  <input type="submit" value="За Казахстан!">
+</form>
+
+<script>
+  document.getElementById("pentagonForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Отменяем стандартную отправку формы
+    
+    const secretCode = document.getElementById("code").value;
+    
+    if (secretCode.toLowerCase() === "жидомасон") {
+      // Открываем новое окно с вашей ссылкой
+      window.open("https://www.youtube.com/watch?v=rvJC8_i1f6w", "_blank"); // Замените на нужный URL
+    } else {
+      alert("❌ Неверный код! Попробуйте ещё раз.");
+    }
+  });
+</script>
 
 <br>
+
+
+<form id="goysForm">
 
 <label for="goys">Вход для Гоев:</label>
 <input type="text" id="goys" placeholder="Вы Гой...">
 <input type="submit" value="Я Гой.">
+</form>
+
+<script>
+    document.getElementById("goysForm").addEventListener("submit",function(event) {
+        event.preventDefault();
+
+        const GoyCode = document.getElementById("goys").value.toLowerCase();
+
+        if (GoyCode === "жидмедведь") {
+            window.open("https://www.youtube.com/watch?v=yKC3ljslrHs", "_blank");
+        } else {
+            alert("❌ Неверный код! Попробуйте ещё раз.");
+        }
+    })
+</script>
 
 <br>
 
-<label for="text">Ваше сообщение:</label>
+<form id="MessageForm">
+<label for="text">Еду в Атырау:</label>
 <textarea name="" id="text" rows="2" cols="15"></textarea>
 <input type="submit" value="Send!">
 </form>
+
+<script>
+    document.getElementById("MessageForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const MessageCode = document.getElementById("text").value;
+        if (MessageCode === "Алаша") {
+            window.open("https://www.youtube.com/watch?v=mJpNmYeooQE", "_blank");
+        } else {
+            alert("❌ Неверный код! Попробуйте ещё раз.");
+        }
+    })
+</script>
 
 <hr>
 
